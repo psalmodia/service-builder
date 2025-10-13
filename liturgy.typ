@@ -3,7 +3,7 @@
 ]
 #set page(
   paper: "us-letter",
-  margin: (x: 1in, y: 1in),
+  margin: (x: 1in, y: 0.5in),
   numbering: "1",
 )
 #set par(justify: true)
@@ -11,19 +11,27 @@
   font: "Roboto",
   size: 14pt,
 )
-#align(center, text(17pt)[
+#align(center, text(1.7em)[
   *#title*
 ])
 #let music(filename) = {
-  // pad(x: 1em, rect(width: 100%, stroke: none, image(filename, height: 19mm)))
   pad(x: 1.15em, rect(width: 100%, stroke: none, scale(115%, reflow: true, image(filename))))
+}
+#let hymn(imagefilename) = {
+  // scale(130%, reflow: true, image(imagefilename))
+  image(imagefilename, width: 86%)
+}
+#let section(txt) = {
+  pagebreak(weak: true)
+  [= #txt]
+}
+#let keep-together(txt) = {
+  block(breakable: false)[#txt]
 }
 
 PRIEST
 
 Blessed is the Kingdom of the Father and of the Son and of the Holy Spirit, now and forever and to the ages of ages.
-
-// #pad(x: 1em, rect(width: 100%, stroke: none)[#image("./images/Amen.svg", height: 18mm)])
 
 #music("./images/Amen.svg")
 
@@ -90,13 +98,13 @@ For to You belong all glory, honor, and worship, to the Father and to the Son an
 #music("./images/Amen.svg")
 
 
-= FIRST ANTIPHON
+#section[FIRST ANTIPHON]
 
-#pad(x: 1em, text(0.8em)[
-_The verses prior to each refrain are intoned._
-
-_These verses are the standard Psalm verses appointed for a regular Sunday; but note that the appointed Psalm verses may change for special feasts or if a non-Sunday Liturgy._
-])
+// #pad(x: 1em, text(0.8em)[
+// _The verses prior to each refrain are intoned._
+// 
+// _These verses are the standard Psalm verses appointed for a regular Sunday; but note that the appointed Psalm verses may change for special feasts or if a non-Sunday Liturgy._
+// ])
 
 PEOPLE
 
@@ -112,11 +120,13 @@ The Lord prepared His throne in heaven, and His Kingdom rules over all.
 
 #music("./images/first-antiphon-en.svg")
 
+#keep-together[
 Glory to the Father and the Son and the Holy Spirit.  Both now and ever and to the ages of ages. Amen.
 
 #music("./images/first-antiphon-final-en.svg")
+]
 
-= THE SMALL LITANY
+#section[THE SMALL LITANY]
 
 PRIEST
 
@@ -139,13 +149,13 @@ PRIEST
 #music("./images/Amin.svg")
 
 
-= SECOND ANTIPHON
+#section[SECOND ANTIPHON]
 
-#pad(x: 1em, text(0.8em)[
-_The verses prior to each refrain are intoned._
-
-_These verses are the standard Psalm verses appointed for a regular Sunday; but note that the appointed Psalm verses may change for special feasts or if a non-Sunday Liturgy._
-])
+// #pad(x: 1em, text(0.8em)[
+// _The verses prior to each refrain are intoned._
+// 
+// _These verses are the standard Psalm verses appointed for a regular Sunday; but note that the appointed Psalm verses may change for special feasts or if a non-Sunday Liturgy._
+// ])
 
 PEOPLE
 
@@ -164,19 +174,21 @@ The Lord shall reign forever; your God, O Zion, to all generations.
 // Save us, O Son of God, risen from the dead. We sing to You, Alleluia.
 #music("./images/second-antiphon-en.svg")
 
+#keep-together[
 PEOPLE
 
 // Glory to the Father and the Son and the Holy Spirit.
 // Both now and ever and to the ages of ages. Amen.
 // Music from AGES (Sacraments, Services, and Music > Frequently Used > Glory. Both now. > Mode 2 > Heirmologic )
 #music("./images/glory-both-mode2-en.svg")
+]
 
 // Music from AGES (The Both before the Theotokion "You are suprememly blessed, O Virgin")
 #music("./images/both-mode2-en.svg")
 
 //Old Green Book:
 //Only begotten Son and Word of God, Immortal One, who for our salvation did so humble Yourself by taking on flesh, taking flesh by, by the Theotokos and ever-virgin Mary; without change did You become man, and were crucified, Christ our God; but conquered death by Your death. As one of the Holy Trinity, and being glorified together with the Father and the Holy Spirit, save us.
-#music("./images/justinian-hymn-en.svg")
+#hymn("./images/justinian-hymn-en.svg")
 
 = THE SMALL LITANY
 
@@ -206,3 +218,73 @@ For You are a good and loving God, and to You we give glory, to the Father and t
 #music("./images/Amen.svg")
 
 
+#section[THIRD ANTIPHON]
+
+#pad(x: 1em, text(0.8em)[
+_While the hymn of the day is sung, the priest carrying the holy Gospel Book comes in procession before the Beautiful Gate of the Icon Screen. The priest blesses the entrance. He then raises the Holy Gospel Book and says:_
+])
+
+PRIEST
+
+Σοφία. Ὀρθοί. Wisdom. Let us be attentive.
+
+PEOPLE
+
+#music("./images/entrance-hymn-en.svg")
+
+// Come, let us worship and bow down before Christ. Save us, O Son of God who did rise from the dead, we sing to You: Alleluia.
+
+#pad(x: 1em, text(0.8em)[
+_The priest enters the Holy Altar. The hymn of the day is repeated, then the hymn of the church and other hymns of the day are sung._
+])
+
+== Church Hymn (English)
+
+#music("./images/church-hymn-en.svg")
+
+== Church Hymn (Greek)
+
+#music("./images/church-hymn-gr.svg")
+
+= TRISAGION HYMN
+
+PRIEST
+
+Τοῦ Κυρίου δεηθῶμεν.
+
+// (Κύριε, ἐλέησον.)
+#music("./images/KE01.svg")
+
+ Ὅτι Ἅγιος εἶ ὁ Θεὸς ἡμῶν, καὶ σοὶ τὴν δόξαν ἀναπέμπομεν, τῷ Πατρὶ καὶ τῷ Υἱῷ καὶ τῷ Ἁγίῳ Πνεύματι, νῦν καὶ ἀεί καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.
+
+// (Ἀμήν.)
+#music("./images/Amin.svg")
+
+PEOPLE
+
+// Holy God, Holy Mighty, Holy Immortal, have mercy on us.
+#music("./images/holy-god-en.svg")
+
+//  Ἅγιος ὁ Θεός, Ἅγιος ἰσχυρός, Ἅγιος ἀθάνατος, ἐλέησον ἡμᾶς.
+#music("./images/holy-god-gr.svg")
+
+// Holy God, Holy Mighty, Holy Immortal, have mercy on us.
+#music("./images/holy-god-en.svg")
+
+// Glory to the Father and the Son and the Holy Spirit.
+// Both now and ever and to the ages of ages. Amen.
+#music("./images/glory-both-mode2-en.svg")
+
+// Holy Immortal, have mercy on us.
+#music("./images/holy-immortal-en.svg")
+
+PRIEST
+
+Δύναμις.
+
+#keep-together[
+PEOPLE
+
+// Ἅγιος ὁ Θεός, Ἅγιος ἰσχυρός, Ἅγιος ἀθάνατος, ἐλέησον ἡμᾶς.
+#music("./images/holy-god-gr.svg")
+]
