@@ -599,3 +599,379 @@ In one, holy, catholic, and apostolic Church. I confess one baptism for the forg
 
 I look for the resurrection of the dead, and the life of the age to come. Amen.
 ]
+
+
+#section[THE HOLY ANAPHORA]
+
+DEACON
+
+Let us stand well! Let us stand in awe! Let us be attentive, that we may present the Holy Offering in peace.
+
+PEOPLE
+
+// A mercy of peace, a sacrifice of praise.
+#music("./images/AMOP.svg")
+
+PRIEST
+
+The grace of our Lord Jesus Christ, the love of God and Father, and the communion of the Holy Spirit, be with all of you.
+
+PEOPLE
+
+// And with your spirit.
+#music("./images/AWYS-Anafora.svg")
+
+PRIEST
+
+Let us lift up our hearts.
+
+PEOPLE
+
+// We lift them up to the Lord.
+#music("./images/Lift-to-the-Lord.svg")
+
+PRIEST
+
+Let us give thanks to the Lord.
+
+#keep-together[
+PEOPLE
+
+// It is proper and right.
+//#music("./images/Proper-and-right-orig.svg")
+#music("./images/Proper-and-right.svg")
+]
+
+PRIEST
+
+It is proper and right to sing to You, bless You, praise You, thank You and worship You in all places of Your dominion; for You are God ineffable, beyond comprehension, invisible, beyond understanding, existing forever and always the same; You and Your only begotten Son and Your Holy Spirit. You brought us into being out of nothing, and when we fell, You raised us up again. You did not cease doing everything until You led us to heaven and granted us Your kingdom to come. For all these things we thank You and Your only begotten Son and Your Holy Spirit; for all things that we know and do not know, for blessings seen and unseen that have been bestowed upon us. We also thank You for this liturgy which You are pleased to accept from our hands, even though You are surrounded by thousands of Archangels and tens of thousands of Angels, by the Cherubim and Seraphim, six-winged, many-eyed, soaring with their wings,
+
+PRIEST
+
+Singing the victory hymn, proclaiming, crying out, and saying:
+
+#keep-together[
+PEOPLE
+
+// Old Green Book:
+// Holy, holy, holy, Lord of angelic hosts, heaven and earth are filled with Your glory. Hosanna in the highest. Blessed is He who comes in the name of the Lord. Hosanna in the highest.
+#music("./images/Holy-Holy-Holy.svg")
+
+// Ἅγιος, ἅγιος, ἅγιος Κύριος Σαβαώθ· πλήρης ὁ οὐρανὸς καὶ ἡ γῆ τῆς δόξης σου, ὡσαννὰ ἐν τοῖς ὑψίστοις. Εὐλογημένος ὁ ἐρχόμενος ἐν ὀνόματι Κυρίου. Ὡσαννὰ ὁ ἐν τοῖς ὑψίστοις.
+]
+
+PRIEST
+
+Take, eat, this is my Body, which is broken for you for the forgiveness of sins.
+
+PEOPLE
+
+// Amen.
+#music("./images/Amen.svg")
+
+PRIEST
+
+Likewise, after supper, He took the cup, saying:
+
+PRIEST
+
+Drink of it all of you; this is my Blood of the new Covenant which is shed for you and for many for the forgiveness of sins.
+
+#keep-together[
+PEOPLE
+
+// Amen.
+#music("./images/Big-Amen.svg")
+]
+
+PRIEST
+
+Remembering, therefore, this command of the Savior, and all that came to pass for our sake, the cross, the tomb, the resurrection on the third day, the ascension into heaven, the enthronement at the right hand of the Father, and the second, glorious coming.
+
+PRIEST
+
+We offer You Your own of Your own in behalf of all and for all.
+
+PEOPLE
+
+// Σὲ ὑμνοῦμεν, σὲ εὐλογοῦμεν, σοὶ εὐχαριστοῦμεν, Κύριε, καὶ δεόμεθά σου, ὁ Θεὸς ἡμῶν.
+#music("./images/Se-imnoumen.svg")
+
+// We praise, we praise you and we bless, we bless You. Thanks we give to You, to You O Lord. Fervently we pray to You, to You, our God.
+#music("./images/We-Praise-You.svg")
+
+PRIEST
+
+Once again we offer to You this spiritual worship without the shedding of blood, and we ask, pray and entreat You: Send down Your Holy Spirit upon us and upon these gifts here presented.
+
+PRIEST
+
+And make this bread the precious Body of Your Christ.
+
+PEOPLE
+
+Amen.
+
+PRIEST
+
+And that which is in this cup the precious Blood of Your Christ.
+
+PEOPLE
+
+Amen.
+
+PRIEST
+
+Changing them by Your Holy Spirit.
+
+PEOPLE
+
+Amen. Amen. Amen.
+
+#keep-together[
+PRIEST
+
+So that they may be to those who partake of them for vigilance of soul, forgiveness of sins, communion of Your Holy Spirit, fulfillment of the kingdom of heaven, confidence before You, and not in judgment or condemnation. Again, we offer this spiritual worship for those who repose in the faith: forefathers, fathers, patriarchs, prophets, apostles, preachers, evangelists, martyrs, confessors, ascetics and for every righteous spirit made perfect in faith.
+]
+
+PRIEST
+
+Especially for our most holy, pure, blessed, and glorious Lady, the Theotokos and ever virgin Mary.
+
+
+#section[Hymn to the Theotokos]
+
+PEOPLE
+
+// Truly it is proper to call you blessed, ever blessed Theotokos. You who are most pure and ever esteemeed, and the mother of our God. You who are more worthy than the Cherubim, and by far more glorious than the Seraphim; you who incorruptibly gave birth to God, God the Word. Verily O Theotokos we magnify you, magnify you.
+#image("./images/Hymn-Theotokos.svg", width: 85%)
+
+PRIEST
+
+Above all, remember, Lord, our Archbishop and father Nicholas. Grant that he may serve Your holy churches in peace. Keep him safe, honorable and healthy for many years, rightly teaching the word of Your truth.
+
+PRIEST
+
+Remember also, Lord, those whom each of us call to mind and all your people.
+
+PEOPLE
+
+// And all Your people.
+#music("./images/AAYP.svg")
+
+// PRIEST
+
+// Remember, Lord, the city in which we live, every city and country, and the faithful who dwell in them. Remember, Lord, the travelers, the sick, the suffering, and the captives, granting them protection and salvation. Remember, Lord, those who do charitable work, who serve in Your holy churches, and who care for the poor. And send Your mercy upon us all.
+
+PRIEST
+
+And grant that with one voice and one heart we may glorify and praise Your most honored and majestic name, of the Father and the Son and the Holy Spirit, now and forever and to the ages of ages.
+
+PEOPLE
+
+// Amen.
+#music("./images/Amen.svg")
+
+PRIEST
+
+The mercy of our great God and Savior Jesus Christ be with all of you.
+
+PEOPLE
+
+// And with your spirit.
+#music("./images/AWYS.svg")
+
+PRIEST
+
+Having remembered all the saints, let us again in peace pray to the Lord.
+
+#keep-together[
+PEOPLE
+
+// Lord, have mercy.
+#music("./images/LHM01.svg")
+]
+
+PRIEST
+
+For the precious Gifts offered and consecrated, let us pray to the Lord.
+
+PEOPLE
+
+// Lord, have mercy.
+#music("./images/LHM02.svg")
+
+PRIEST
+
+That our loving God who has received them at His holy, heavenly, and spiritual altar as an offering of spiritual fragrance, may in return send upon us divine grace and the gift of the Holy Spirit, let us pray.
+
+PEOPLE
+
+// Lord, have mercy.
+#music("./images/LHM03.svg")
+
+PRIEST
+
+Having prayed for the unity of the faith and for the communion of the Holy Spirit, let us commit ourselves, and one another, and our whole life to Christ our God.
+
+PEOPLE
+
+// To You, O Lord.
+#music("./images/TYOL01.svg")
+
+// PRIEST
+
+// We entrust to You, loving Master, our whole life and hope, and we ask, pray, and entreat: make us worthy to partake of your heavenly and awesome Mysteries from this holy and spiritual Table with a clear conscience; for the remission of sins, forgiveness of transgressions, communion of the Holy Spirit, inheritance of the kingdom of heaven, confidence before You, and not in judgment or condemnation.
+
+PRIEST
+
+And make us worthy, Master, with confidence and without fear of condemnation, to dare call You, the heavenly God, FATHER, and to say:
+
+#section[THE LORD’S PRAYER (in Multiple languages)]
+
+PEOPLE
+
+=== Greek
+
+Πάτερ ἡμῶν, ὁ ἐν τοῖς οὐρανοῖς· \
+ἁγιασθήτω τὸ ὄνομά σου, \
+ἐλθέτω ἡ βασιλεία σου, \
+γενηθήτω τὸ θέλημά σου, \
+ὡς ἐν οὐρανῷ καὶ ἐπὶ τῆς γῆς. \
+Τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον. \
+Καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν, \
+ὡς καὶ ἡμεῖς ἀφίεμεν τοῖς ὀφειλέταις ἡμῶν. \
+Καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, \
+ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ.
+
+=== Romanian
+
+Tatal nostru Care esti in ceruri, \
+Sfinteasca-se numele Tau, \
+Vie imparatia Ta, Faca-se voia Ta, \
+precum in cer asa si pre Pamant. \
+Painea noastra cea de toate zilele, \
+da-ne-o noua astazi \
+Si ne iarta noua greselile noastre \
+Precum si noi iertam gresitilor nostri. \
+Si nu ne duce pe noi in ispita, \
+Ci ne izbaveste de cel rau.
+
+=== French
+
+Notre Père, qui es aux cieux, \
+que ton nom soit sanctifié, \
+que ton règne vienne, \
+que ta volonté soit faite \
+sur la terre comme au ciel; \
+donne-nous aujourd'hui notre pain essentiel; \
+remets-nous nos dettes, \
+comme nous aussi les remettons à nos débiteurs; \
+et ne nous laisse pas entrer dans l'épreuve, \
+mais délivre-nous du Malin.
+
+=== Spanish
+
+Padre Nuestro, que estás en los cielos, \
+Santificado sea Tu Nombre, \
+Venga a nos Tu reino, \
+Hágase Tu voluntad así en la tierra como en el cielo. \
+El pan nuestro de cada día, dánoslo hoy \
+Y perdónanos nuestras deudas así como nosotros perdonamos a nuestros deudores. \
+Y no nos dejes caer en la tentación, más líbranos del mal.
+
+=== Albanian
+
+Ati yne qe je ne qiell u shenjterofte emri yt .Ardhte mbreteria jote.U befte deshira jote
+si ne qiell ashtu edhe mbi dhe .Buken tone te perditshme jepna neve sot .Dhe falna
+fajet tona sikurse edhe ne ua falim fajtoreve tane. Dhe mos na shtjer ne ngasje po
+shpetona nga i ligu . Amin.
+
+=== Arabic
+
+//#music("./images/arabic-our-father.png")
+
+#text(1.2em, font: "Noto Sans Arabic", lang: "ar", dir: rtl)[
+ أَبَانَا الذِي فِي السَّمَاوَاتِ، \
+ لِيَتَقَدَّسَ اسْمُكَ \
+ لِيَأْتِ مَلَكُوتُكَ \
+ لِتَكُنْ مَشِيئَتُكَ فِي الأَرْضِ كَمَا السَّمَاءِ \
+ اعْطِنَا خُبْزَنَا اليَوْمِيَّ \
+ اعْفِنَا  فِي مِمَّا عَلَيْنَا فَقَدْ أَعْفَيْنَا نَحْنُ أيَضاً مَنْ \
+ لَنَا عَلَيْهِ \
+ وَلاَ تُدْخِلْنَا فِي تَجْرِبَةٍ \
+ لَكِنْ نَجِّنَا مِنَ الشِّرِّيرِ
+ لأَنَّ لَكَ الْمُلْكَ وَالْقُوَّةَ وَالْمَجْدَ إِلَى الأَبَدِ\
+  آمِين \
+]
+// Abana alathie fi asamawat, li yatakadas ismok, li ya’atie malakotok, litakon mashia
+// tok, kama fisama’ kathaleka ala al ard. A’atinia khubzana kafafa yawmina, wa igfer
+// lana khatayana, kama nahnu naghfer la man akhta’a elayna, wa la tudkhilna fit a
+// jareeb; laken najjina min ashireer.
+
+=== Slavonic
+
+Оче нашь ижє ѥси на нбсєхъ . да ститьсѧ имѧ \
+твоѥ да придєть црствиѥ твоѥ · да бѫдєть воля \
+твоя · яка на нбси и на земли хлѣбъ нашь насѫщьиыи · \
+даждь намъ дьньсь · и остави намъ · длъгы \
+нашѧ · яко и мы оставляємъ длъжникомъ нашимъ \
+и нє въвєди насъ въ напасть · иъ избави ны отъ нєприязни
+
+// The following may be Russian, or Russian transliteration.
+// О́тче наш, И́же еси́ на Небесе́х, да святи́тся И́мя Твое́, \
+// да прии́дет Ца́рствие Твое́, да бу́дет во́ля Твоя́, \
+// я́ко на Небеси́ и на земли́. Хлеб наш насу́щный да́ждь нам днесь; \
+// и оста́ви нам до́лги на́ша, я́коже и мы оставля́ем должнико́м на́шим; \
+// и не введи́ нас во искуше́ние, но изба́ви нас от лука́ваго. \
+
+// Ot-che nash, Ee-zhe ye see na nye-bye-sekh! da svya-tee-tsya ee-mya \
+// Tvo-ye, da pri-ee-dyet Tsar-stvi-ye Tvo-ye: da boo-dyet vol-ya \
+// Tvo-ya, ya-ko na nye-bye-see ee na zem-lee. Khleb nash na-soosch-nui \
+// dazhd nam dnyes: ee o-sta-vee nam dol-gee \
+// na-shya, ya-ko-zhe ee mui o-sta-vlya-yem dol-zhnee-kom na-shuim: \
+// ee nye vvye-dee nas vo ees-koo-shye-ni-ye, no eez-ba-vee nas ot loo-ka-va-go.
+
+=== English
+
+Our Father, who art in heaven, hallowed be Thy name. \
+Thy kingdom come. Thy will be done, \
+on earth as it is in heaven. \
+Give us this day our daily bread; \
+and forgive us our trespasses, \
+as we forgive those who trespass against us; \
+and lead us not into temptation, but deliver us from evil.
+
+PRIEST
+
+For Yours is the Kingdom and the power and the glory, of the Father and of the Son and of the Holy Spirit, now and forever and to the ages of ages.
+
+// (Amen.)
+#music("./images/Amen.svg")
+
+Εἰρήνη πᾶσι.  Peace be with you all.
+
+// (And with your spirit.)
+#music("./images/AWYS.svg")
+
+// DEACON
+
+Let us bow our heads to the Lord.
+
+// (To You, O Lord.)
+#music("./images/TYOL01.svg")
+
+// PRIEST (read)
+
+// We give thanks to You, invisible King. By Your infinite power You created all things and by Your great mercy You brought everything from nothing into being. Master, look down from heaven upon those who have bowed their heads before You; they have bowed not before flesh and blood, but before You the awesome God. Therefore, Master, guide the course of our life for our benefit according to the need of each of us. Sail with those who sail; travel with those who travel; and heal the sick, Physician of our souls and bodies.
+
+PRIEST
+
+By the grace, mercy, and love for us of Your only begotten Son, with whom You are blessed, together with Your all holy, good, and life giving Spirit, now and forever and to the ages of ages.
+
+PEOPLE
+
+// Amen.
+#music("./images/Big-Amen.svg")
+
+
