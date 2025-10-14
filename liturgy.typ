@@ -28,6 +28,9 @@
 #let keep-together(txt) = {
   block(breakable: false)[#txt]
 }
+#let rubric(txt) = {
+  pad(x: 1em, text(0.8em,emph(txt)))
+}
 
 PRIEST
 
@@ -287,4 +290,312 @@ PEOPLE
 
 // Ἅγιος ὁ Θεός, Ἅγιος ἰσχυρός, Ἅγιος ἀθάνατος, ἐλέησον ἡμᾶς.
 #music("./images/holy-god-gr.svg")
+]
+
+
+//= READINGS
+
+#section[THE EPISTLE]
+
+PRIEST
+
+Let us be attentive.  Peace be with you all.
+
+PEOPLE
+
+#music("./images/AWYS.svg")
+
+READER
+
+#rubric[The Reader reads the Prokeimenon verses.]
+
+PRIEST
+
+Wisdom.
+
+READER
+
+The reading is from #text(0.8em)[_(the name of the book of the New Testament from which the Apostolic reading is taken)._]
+
+PRIEST
+
+Let us be attentive.
+
+READER
+
+#rubric[The Reader reads the designated apostolic lesson of the day.]
+
+PRIEST
+
+Peace be with you, Reader.
+
+READER
+
+And with your spirit.
+
+PEOPLE
+
+// Alleluia. Alleluia. Alleluia.
+#music("./images/alleluia-post-epistle.svg")
+
+#section[THE HOLY GOSPEL]
+
+PRIEST
+
+Wisdom. Arise. Let us hear the Holy Gospel. Peace be with you all.
+
+PEOPLE
+
+// And with your spirit.
+#music("./images/AWYS-gospel.svg")
+
+PRIEST
+
+The reading is from the Holy Gospel according to /(Name)/.
+
+PEOPLE
+
+// Glory to You, O Lord, glory to You.
+#music("./images/glory-gospel.svg")
+
+PRIEST
+
+Let us be attentive!
+
+#rubric[The priest reads the designated lesson from one of the four Holy Gospels.]
+
+PEOPLE
+
+// Glory to You, O Lord, glory to You.
+#music("./images/glory-gospel-2.svg")
+
+
+= SERMON
+
+#rubric[The priest's addresses a sermon.]
+
+PRIEST
+
+And grant that always guarded by Your power we may give glory to You, the Father and the Son and the Holy Spirit, now and forever and to the ages of ages.
+
+// (Amen.)
+
+
+#section[THE GREAT ENTRANCE]
+
+PEOPLE
+
+Οἱ τὰ Χερουβεὶμ μυστικῶς εἰκονίζοντες, καὶ τῇ ζωοποιῷ Τριάδι Τριάδι τὸν τρισάγιον ὕμνον προσᾴδοντες, πᾶσαν τὴν βιοτικὴν ἀποθώμεθα πᾶσαν μέριμναν, ὡς τὸν Βασιλέα τῶν ὅλων ὑποδεξόμενοι.
+
+
+// Old Green Book:
+// We who mystically represent the Cherubim, represent the Cherubim and we sing, we sing unto the life giving Trinity, the Trinity, the Trinity, Trinity, the Trinity the thrice holy hymn, we sing the thrice holy hymn. Let us lay aside the cares, all the cares of this life, all the cares of this life that we may receive the King, receive the King of all.
+
+Let us who mystically represent the cherubim, and who sing the thrice holy hymn to the life creating trinity, now lay aside every worldly care, so that we may receive the King of All.
+
+// DEACON
+PRIEST
+
+Πάντων ὑμῶν μνησθείη Κύριος ὁ Θεὸς ἐν τῇ βασιλείᾳ αὐτοῦ, πάντοτε, νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.
+
+PEOPLE
+
+Ἀμήν. (A-min)  #text(0.8em)[_(Pitched with priest.)_]
+
+PRIEST
+
+May the Lord God remember all of you in His kingdom, now and forever and to the ages of ages.
+
+#rubric[The priest enters the sanctuary, while the people sing the end of the Cherubic Hymn.]
+
+PEOPLE
+
+Amen.  #text(0.8em)[_(Re-pitched to Cherubic Hymn conclusion.)_]
+
+// Old Green Book:
+//Invisibly escorted by angelic hosts, angelic hosts. Alleluia. Alleluia. Alleluia.
+
+Invisibly escorted by angelic hosts, angelic hosts. Alleluia. Alleluia. Alleluia.
+
+Ταῖς ἀγγελικαῖς ἀοράτως δορυφορούμενον τάξεσιν. Ἀλληλούϊα. Ἀλληλούϊα. Ἀλληλούϊα.
+//(Tes angelikes aoratos thoriforumenon taxesin. Alliluia. Alliluia. Alliluia.)
+
+
+#section[THE LITANY OF COMPLETION]
+
+#rubric[After placing the holy gifts on the holy Table, the priest (or deacon) says:]
+
+// DEACON
+PRIEST
+
+Let us complete our prayer to the Lord.
+
+// (Lord, have mercy.)
+#music("./images/LHM01.svg")
+
+For the precious Gifts here presented, let us pray to the Lord.
+
+// (Lord, have mercy.)
+#music("./images/LHM02.svg")
+
+For this holy house and for those who enter it with faith, reverence, and godly fear, let us pray to the Lord.
+
+// (Lord, have mercy.)
+#music("./images/LHM03.svg")
+
+For our deliverance from all affliction, wrath, danger, and necessity, let us pray to the Lord.
+
+// (Lord, have mercy.)
+#music("./images/LHM01.svg")
+
+Help us, save us, have mercy on us, and protect us, O God, by Your grace.
+
+// (Lord, have mercy.)
+#music("./images/LHM02.svg")
+
+That the whole day may be perfect, holy, peaceful, and sinless, let us ask the Lord.
+
+// (Grant this, O Lord.)
+#music("./images/GTOL01.svg")
+
+For an angel of peace, a faithful guide, a guardian of our souls and bodies, let us ask the Lord.
+
+// (Grant this, O Lord.)
+#music("./images/GTOL02.svg")
+
+For forgiveness and remission of our sins and transgressions, let us ask the Lord.
+
+// (Grant this, O Lord.)
+#music("./images/GTOL03.svg")
+
+For all that is good and beneficial to our souls, and for peace in the world, let us ask the Lord.
+
+// (Grant this, O Lord.)
+#music("./images/GTOL01.svg")
+
+That we may complete the remaining time of our life in peace and repentance, let us ask the Lord.
+
+// (Grant this, O Lord.)
+#music("./images/GTOL02.svg")
+
+For a Christian end to our life, peaceful, without shame and suffering, and for a good account before the awesome judgment seat of Christ, let us ask the Lord.
+
+// (Grant this, O Lord.)
+#music("./images/GTOL03.svg")
+
+Remembering our most holy, pure, blessed, and glorious Lady, Theotokos and ever-virgin Mary, with all the saints, let us commit ourselves and one another and our whole life to Christ our God.
+
+// (To You, O Lord.)
+#music("./images/TYOL01.svg")
+
+
+== THE PRAYER OF THE PROSKOMIDE
+
+PRIEST
+
+Through the mercies of Your only begotten Son, with Whom You are blessed, together with Your all-holy, good, and life-creating Spirit, now and forever and to the ages of ages.
+
+PEOPLE
+
+// Amen.
+#music("./images/Amen.svg")
+
+PRIEST
+
+Εἰρήνη πᾶσι.  Peace be with all.
+
+PEOPLE
+
+// And with your spirit.
+#music("./images/AWYS.svg")
+
+DEACON
+
+Let us love one another, that with one mind we may confess:
+
+#keep-together[
+PEOPLE
+
+// Father, Son, and Holy Spirit: Trinity, one in essence and undivided.
+
+// Old Green Book.
+//#music("./images/FSHS.svg")
+
+// The way Greg does it:
+#music("./images/FSHS-Gregish.svg")
+]
+
+PRIEST
+
+#rubric[The Priest kisses the holy Gifts and he sings in Romanian:]
+
+Iubite-voi, Doamne, vartutea mea! Domnul este intarirea mea si scaparea mea si izbavitorul meu!
+
+#rubric[Translation: I love You, O Lord, my strength. The Lord is my rock, and my fortress, and my deliverer.]
+
+DEACON
+
+Guard the doors! Wisdom! Let us be attentive!
+
+
+#section[THE SYMBOL OF OUR FAITH (THE CREED)]
+
+PEOPLE
+
+=== Greek
+
+#text(1.2em)[
+Πιστεύω εἰς ἕνα Θεόν, Πατέρα, Παντοκράτορα, ποιητὴν οὐρανοῦ καὶ γῆς, ὁρατῶν τε πάντων καὶ ἀοράτων.
+
+Καὶ εἰς ἕνα Κύριον Ἰησοῦν Χριστόν, τὸν Υἱὸν τοῦ Θεοῦ τὸν μονογενῆ, τὸν ἐκ τοῦ Πατρὸς γεννηθέντα πρὸ πάντων τῶν αἰώνων·
+
+φῶς ἐκ φωτός, Θεὸν ἀληθινὸν ἐκ Θεοῦ ἀληθινοῦ, γεννηθέντα οὐ ποιηθέντα, ὁμοούσιον τῷ Πατρί, δι' οὗ τὰ πάντα ἐγένετο.
+
+Τὸν δι' ἡμᾶς τοὺς ἀνθρώπους καὶ διὰ τὴν ἡμετέραν σωτηρίαν κατελθόντα ἐκ τῶν οὐρανῶν καὶ σαρκωθέντα ἐκ Πνεύματος Ἁγίου καὶ Μαρίας τῆς Παρθένου καὶ ἐνανθρωπήσαντα.
+
+Σταυρωθέντα τε ὑπὲρ ἡμῶν ἐπὶ Ποντίου Πιλάτου, καὶ παθόντα καὶ ταφέντα.
+
+Καὶ ἀναστάντα τῇ τρίτῃ ἡμέρα κατὰ τὰς Γραφάς.
+
+Καὶ ἀνελθόντα εἰς τοὺς οὐρανοὺς καὶ καθεζόμενον ἐκ δεξιῶν τοῦ Πατρός.
+
+Καὶ πάλιν ἐρχόμενον μετὰ δόξης κρῖναι ζῶντας καὶ νεκρούς, οὗ τῆς βασιλείας οὐκ ἔσται τέλος.
+
+Καὶ εἰς τὸ Πνεῦμα τὸ Ἅγιον, τὸ Κύριον, τὸ ζωοποιόν, τὸ ἐκ τοῦ Πατρὸς ἐκπορευόμενον,
+
+τὸ σὺν Πατρὶ καὶ Υἱῷ συμπροσκυνούμενον καὶ συνδοξαζόμενον, τὸ λαλῆσαν διὰ τῶν προφητῶν.
+
+Εἰς μίαν, Ἁγίαν, Καθολικὴν καὶ Ἀποστολικὴν Ἐκκλησίαν. Ὁμολογῶ ἓν βάπτισμα εἰς ἄφεσιν ἁμαρτιῶν.
+
+Προσδοκῶ ἀνάστασιν νεκρῶν. Καὶ ζωὴν τοῦ μέλλοντος αἰῶνος. Ἀμήν.
+]
+
+PEOPLE
+
+=== English
+
+#text(1.2em)[
+I believe in one God, Father Almighty, Creator of heaven and earth, and of all things visible and invisible.
+
+And in one Lord Jesus Christ, the only-begotten Son of God, begotten of the Father before all ages;
+
+Light of Light, true God of true God, begotten, not created, of one essence with the Father through Whom all things were made.
+
+Who for us men and for our salvation came down from heaven and was incarnate of the Holy Spirit and the Virgin Mary and became man.
+
+He was crucified for us under Pontius Pilate, and suffered and was buried;
+
+And He rose on the third day, according to the Scriptures.
+
+He ascended into heaven and is seated at the right hand of the Father;
+
+And He will come again with glory to judge the living and dead. His kingdom shall have no end.
+
+And in the Holy Spirit, the Lord, the Creator of life, Who proceeds from the Father,
+
+Who together with the Father and the Son is worshipped and glorified, Who spoke through the prophets.
+
+In one, holy, catholic, and apostolic Church. I confess one baptism for the forgiveness of sins.
+
+I look for the resurrection of the dead, and the life of the age to come. Amen.
 ]
