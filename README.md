@@ -1,13 +1,22 @@
 # Prerequisites
 
-- a POSIX shell (or any other type of shell will do, so long as you know how to invoke CLI commands)
+- bash
 - Typst
 - Lilypond
-- Emacs (org mode) -- for the music snippets archive
 
 # Usage
 
-First, build the music snippet SVGs into `images/`. This requires Emacs and knowledge of Org Mode -- you will simply run all the code blocks in `music_snippets_HTFW_liturgy.org` which will generate all the SVG files. (I may change this step in the future to get rid of the Emacs dependency; turn it into a shell script instead.)
+## Create the music snippets
+
+First, build the music snippet SVGs into `images/`. You only have to run a bash script which does this for you, like this:
+
+```
+$ bin/create-music-snippets-for-liturgy.sh
+```
+
+The (lilypond) source for each music snippet is contained that very bash script, which will also invoke `lilypond` to create the output SVGs.
+
+## Compile the service book
 
 Finally, compile the source with `typst`.
 

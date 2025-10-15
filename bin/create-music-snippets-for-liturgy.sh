@@ -1,198 +1,192 @@
-#+TITLE: Music score (staff) snippets for the HTFW liturgy
+#!/bin/bash
 
-#+name: lpsnippet
-#+begin_src emacs-lisp :exports none :results silent
-"\\paper{
-indent=0\\mm
-line-width=170\\mm
-oddFooterMarkup=##f
-oddHeaderMarkup=##f
-bookTitleMarkup=##f
-scoreTitleMarkup=##f
-}"
-#+end_src
+# lilypond should be on $PATH.
 
-#+name: Amen
-#+begin_src emacs-lisp :exports none :results silent
-"\\relative c'' {
-  \\textLengthOn
-  \\override Staff.TimeSignature #'stencil = ##f
-  \\time 2/4
-  g2
-  \\time 4/4
-  g1
-}\\addlyrics{A- men}"
-#+end_src
+OUTPUT_DIR=${OUTPUT_DIR:-images}
+mkdir -p ${OUTPUT_DIR}
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Amen.svg :noweb yes
-<<lpsnippet()>>
-<<Amen()>>
-#+end_src
+create () {
+  local OUTFILE="$OUTPUT_DIR/$1"
+  echo "Creating $OUTFILE.svg ..." >&2
+  cat <(cat <<EOF
+\version "2.24.4"
+\paper{
+  indent=0\mm
+  line-width=170\mm
+  oddFooterMarkup=##f
+  oddHeaderMarkup=##f
+  bookTitleMarkup=##f
+  scoreTitleMarkup=##f
+}
+EOF
+) - | lilypond --silent \
+               --svg -o "$OUTFILE" \
+               -dbackend=svg \
+               -duse-paper-size-for-page=#f \
+               -dno-point-and-click \
+               -
+}
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Amin.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Amen
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
+  \time 2/4
+  g2
+  \time 4/4
+  g1
+}\addlyrics{A- men}
+EOF
+
+cat <<EOF | create Amin
+\relative c'' {
+  \textLengthOn
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   g2
   \time 4/4
   g1
 }\addlyrics{Ἀ -- μήν}\addlyrics{A -- min}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Big-Amen.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Big-Amen
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4( f e a g2 f) | e1
 }\addlyrics{A- men}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/LHM00.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create LHM00
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   g4( fis) e
   \time 5/4
   g4 g1
 }\addlyrics{Lord, have mer- cy}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/LHM01.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create LHM01
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g a2 | g1
 }\addlyrics{Lord, have mer- cy}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/LHM02.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create LHM02
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g2( a4) b
   \time 6/4
   c4( a) g1
 }\addlyrics{Lord, have mer- cy}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/LHM03.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create LHM03
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4( f e) a
   \time 6/4
   g4( f) e1
 }\addlyrics{Lord, have mer- cy}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/KE00.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create KE00
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   g4 fis e
   \time 6/4
   g4 g g1
 }\addlyrics{Κύ -- ρι -- ε, 'λέ -- η -- σον}\addlyrics{Ky -- ri -- e, 'le -- i -- son}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/KE01.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create KE01
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   \tuplet 3/2 {g4 g g} a4 a | g1
 }\addlyrics{Κύ -- ρι -- ε, 'λέ -- η -- σον}\addlyrics{Ky -- ri -- e, 'le -- i -- son}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/KE02.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create KE02
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g a b
   \time 6/4
   c4 a g1
 }\addlyrics{Κύ -- ρι -- ε, ε -- λέ -- η -- σον}\addlyrics{Ky -- ri -- e, e -- le -- i -- son}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/KE03.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create KE03
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 f e a
   \time 6/4
   g4 f e1
 }\addlyrics{Κύ -- ρι -- ε, ε -- λέ -- η -- σον}\addlyrics{Ky -- ri -- e, e -- le -- i -- son}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/TYOL00.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create TYOL00
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   g2
   \time 4/4
   a2 a | g1
 }\addlyrics{To You, O Lord}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/TYOL01.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create TYOL01
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   a2
   \time 4/4
   g2 f | e1
 }\addlyrics{To You, O Lord}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/SK00.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create SK00
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   g2
   \time 4/4
   a2 a | g1
 }\addlyrics{Σοί, Κύ -- ρι -- ε.}\addlyrics{Si, Ky -- ri -- e.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/SK01.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create SK01
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   a2
   \time 4/4
   g2 f | e1
 }\addlyrics{Σοί, Κύ -- ρι -- ε.}\addlyrics{Si, Ky -- ri -- e.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/first-antiphon-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create first-antiphon-en
 \layout {
   indent = #0
   line-width = #120
@@ -200,7 +194,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   e4 e e f
   \time 6/4
@@ -208,10 +202,9 @@ scoreTitleMarkup=##f
   \time 4/4
   a2 g | a2 f | g4( a g f) | e1
 }\addlyrics{Through the in- ter- ces- sions of the The- o- to- kos, Sa- vior, save us.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/first-antiphon-final-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create first-antiphon-final-en
 \layout {
   indent = #0
   line-width = #120
@@ -219,7 +212,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g g g
   \time 6/4
@@ -227,10 +220,9 @@ scoreTitleMarkup=##f
   \time 4/4
   f2.( g4 a2 g)\fermata |
 }\addlyrics{Through the in- ter- ces- sions of the The- o- to- kos, Sa- vior, save us.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/first-antiphon-gr.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create first-antiphon-gr
 \layout {
   indent = #0
   line-width = #120
@@ -238,7 +230,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   e4 f
   \time 6/4
@@ -247,10 +239,9 @@ scoreTitleMarkup=##f
   a2 g | a2 f | g4( a) g f | e1
 }\addlyrics{Ταῖς πρεσ- βεί- αις τῆς Θε- ο- τό- κου, Σῶ- τερ, σῶ- σον ἡ- μᾶς.}
  \addlyrics{Tes prez- vi- es tis The- o- to- ku, So- ter, so- son i- mas.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/second-antiphon-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create second-antiphon-en
 \layout {
   indent = #0
   line-width = #120
@@ -258,7 +249,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   a4( b) b b
   b4( a) a( g)
@@ -267,10 +258,9 @@ scoreTitleMarkup=##f
   \time 4/4
   b2 a4 g | g1 | a4 f a g | g4 f f e | e1
 }\addlyrics{Save us, O Son of God, who did a- rise from the dead. We sing to You, Al- le- lu- i- a.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/second-antiphon-gr.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create second-antiphon-gr
 \layout {
   indent = #0
   line-width = #120
@@ -278,7 +268,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   a4( b) b4 b | b4 a a g
   \time 6/4
@@ -287,10 +277,9 @@ scoreTitleMarkup=##f
   b2 a4 g | g1 |  a4 f a g | g4 f f e | e1
 }\addlyrics{Σῶ- σον ἡ- μᾶς Υἱ- ὲ Θε- οῦ, ὁ ἀ- να- στὰς ἐκ νε- κρῶν, ψάλ- λον- τάς σοι, Ἀλ- λη- λού- ϊ- α.}
  \addlyrics{So- son i- mas i- e The- u o a- na- stas ek- ne- kron psal- lon- das Si, Al- li- lu- i- a.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/both-mode2-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create both-mode2-en
 \layout {
   indent = #0
   line-width = #120
@@ -298,7 +287,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 1/4
   f4
   \time 2/4 g4 e
@@ -308,10 +297,9 @@ scoreTitleMarkup=##f
   \time 3/4 g4 e f
   \time 2/4 g2
 }\addlyrics{Both now and ev- er and to the a- ges of a- ges. A- men.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/glory-both-mode2-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create glory-both-mode2-en
 \layout {
   indent = #0
   line-width = #120
@@ -319,15 +307,14 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4 g4 f g a | b4 a g f | \time 2/4 g4 r4 | \time 4/4 f4 g g e | e8( f g4) g r4
   \time 3/4 f4 g a |\time 4/4 b4( a) g f | \time 2/4 g4 g | \time 4/4 a8( b a4) g f | \time 3/4 g4 e f | \time 2/4 g4 r4
 }\addlyrics{Glo- ry to the Fa- ther and the Son and the Ho- ly Spi- rit.
   Now and for -- ev -- er and to the a -- ges of a -- ges. A -- men.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/justinian-hymn-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create justinian-hymn-en
 \layout {
   indent = #0
   line-width = #120
@@ -335,7 +322,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   e2 e4 f | g4 g g g | a2 a | g2. g4 | b4( a) g( f) | f2( e^\fermata)
   f4 d e f | g4 g g g |a4 a g( f) | g4 g e f8( g) | f4( g) g2^\fermata
@@ -355,10 +342,9 @@ scoreTitleMarkup=##f
  and be- ing glo- ri- fied to- ge- ther with
  the Fa- ther and the Ho- ly Spi- rit, save us.
 }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/entrance-hymn-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create entrance-hymn-en
 \layout {
   indent = #0
   line-width = #120
@@ -367,7 +353,7 @@ scoreTitleMarkup=##f
 \markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(G. Theodoridis)" } }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   g4 g g
   \time 4/4
@@ -383,10 +369,9 @@ scoreTitleMarkup=##f
  ris -- en from the dead, __
  we sing to You: Al -- le -- lu -- i -- a.
 }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/church-hymn-gr.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create church-hymn-gr
 \layout {
   indent = #0
   line-width = #120
@@ -395,7 +380,7 @@ scoreTitleMarkup=##f
 \markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key f \major
   \time 3/4 f4 f g | a4 g f | \time 5/4 a4 g2 d4( e) | \time 4/4 f( g) f( e) | f2
   f4 g | g4( a) a2( a4) f g a | bes2 a4 g | \time 6/4 a2 g
@@ -416,10 +401,9 @@ scoreTitleMarkup=##f
   ke δi af -- ton tin i -- ku -- me -- nin sa -- ghi -- nev -- sas
   fi -- lan -- θro -- pe δo -- ksa Si.
 }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/church-hymn-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create church-hymn-en
 \layout {
   indent = #0
   line-width = #120
@@ -428,7 +412,7 @@ scoreTitleMarkup=##f
 \markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key f \major
   \time 3/4 f4 f g | \time 4/4 a4( g f a) g2 d4( e) | f( g) f( e) | f2
   f4 g | g4 a a2( a4) f g a | bes2 a4 g | \time 6/4 a2 g
@@ -443,10 +427,9 @@ scoreTitleMarkup=##f
   And to You the u -- ni -- verse was ev -- er drawn.
   All glo -- ry to You, O Lord.
 }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/holy-god-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create holy-god-en
 \layout {
   indent = #0
   line-width = #120
@@ -455,16 +438,15 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   b4( a g f | g2) e | f2( g) |
   b4( a g f | g2) e | f2 g |
   g4( e) f g | b4( a g f) | e2. g4 | b2( a) | g2 f | g1 |
 }\addlyrics{Ho -- ly God, Ho -- ly Migh -- ty, Ho -- ly Im -- mor -- tal, have mer -- cy on us.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/holy-immortal-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create holy-immortal-en
 \layout {
   indent = #0
   line-width = #120
@@ -473,14 +455,13 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4( e) f g | b4( a g f) | e2. g4 | b2( a) | g2 f | g1 |
 }\addlyrics{Ho -- ly Im -- mor -- tal, have mer -- cy on us.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/holy-god-gr.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create holy-god-gr
 \layout {
   indent = #0
   line-width = #120
@@ -489,17 +470,16 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   b4( a) g( f) | g2 e | f2 g |
   b4( a) g( f) | g2 e | f2 g |
   g4 e f g | b4( a) g( f) | e2. g4 | b2 a | g2 f | g1 |
 }\addlyrics{Ἅ -- γι -- ος ὁ Θε -- ός, Ἅ -- γι -- ος ἰσ -- χυ -- ρός, Ἅ -- γι -- ος ἀ -- θά -- να -- τος, ἐ -- λέ -- η -- σον ἡ -- μᾶς.}
 \addlyrics{A -- yi -- os o The -- os, A -- yi -- os I -- schi -- ros, A -- yi -- os A -- tha -- na -- tos, e -- le -- i -- son i -- mas.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/alleluia-post-epistle.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create alleluia-post-epistle
 \layout {
   indent = #0
   line-width = #120
@@ -508,14 +488,13 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   c4 d | e8 e e4\fermata | d4 e | f8 f f4\fermata | e4 f | g4\fermata f\fermata | e2 
 }\addlyrics{Al -- le -- lu -- i -- a, Al -- le -- lu -- i -- a, Al -- le -- lu -- i -- a.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/AWYS-gospel.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create AWYS-gospel
 \layout {
   indent = #0
   line-width = #120
@@ -524,15 +503,14 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative f' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key f \major
   \time 4/4
   f2 e4 f | g2 f
 }\addlyrics{And with your spi -- rit.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/AWYS.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create AWYS
 \layout {
   indent = #0
   line-width = #120
@@ -540,16 +518,15 @@ scoreTitleMarkup=##f
 }
 \relative g' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g2 fis4 g
   \time 6/4
   a2 g1
 }\addlyrics{And with your spi -- rit.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/glory-gospel.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create glory-gospel
 \layout {
   indent = #0
   line-width = #120
@@ -558,15 +535,14 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative f' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key f \major
   \time 4/4
   f2 f4 f | f4 f f2 | g2 g4 g | f1
 }\addlyrics{Glo -- ry to You, O Lord, glo -- ry to You. }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/glory-gospel-2.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create glory-gospel-2
 \layout {
   indent = #0
   line-width = #120
@@ -575,16 +551,15 @@ scoreTitleMarkup=##f
 %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 \relative f' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key f \major
   \time 4/4
   f2 f4 f | \time 5/4 f2 c4 c2 | \time 4/4 a'2 g4 g | f2. r4
 }\addlyrics{Glo -- ry to You, O Lord, glo -- ry to You. __}
-#+end_src
+EOF
 
-# #+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/glory-gospel-2.svg :noweb yes
-# <<lpsnippet()>>
-# \layout {
+# cat <<EOF | create glory-gospel-2
+# # \layout {
 #   indent = #0
 #   line-width = #120
 #   ragged-last = ##t
@@ -592,61 +567,56 @@ scoreTitleMarkup=##f
 # %\markup { \override #'(line-width . 68.5) \fill-line { \null \null \teeny "(Old Green Book)" } }
 # \relative f' {
 #   \textLengthOn
-#   \override Staff.TimeSignature #'stencil = ##f
+#   \override Staff.TimeSignature.stencil = ##f
 #   \key f \major
 #   \time 4/4
 #   f2 f4 f | f4 c c2 | bes'2 a4 g | \time 3/4 g2( f4 | \time 4/4 e2 d4 e | f1)
 # }\addlyrics{Glo -- ry to You, O Lord, glo -- ry to You. __}
-# #+end_src
+# EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/GTOL00.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create GTOL00
 \relative g' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 1/4
   d4
   \time 3/4
   g4 fis8( g) g4
 }\addlyrics{Grant this, O Lord}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/GTOL01.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create GTOL01
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g2 a4 a | g1
 }\addlyrics{Grant this, O Lord}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/GTOL02.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create GTOL02
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g2( a4 b)
   \time 6/4
   c4 a g1
 }\addlyrics{Grant this, O Lord}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/GTOL03.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create GTOL03
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4( f e a)
   \time 6/4
   g4 f e1
 }\addlyrics{Grant this, O Lord}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/FSHS.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create FSHS
 \layout {
   indent = #0
   line-width = #120
@@ -654,14 +624,13 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   c4( b) c( d) | e2. e4 | f8( e d4) e4( f) | g2 g4 r8 g8 | c4 a g( f) | f4 e8( f) g4( f) | e2 c4 d | e2 d | c1
 }\addlyrics{Fa -- ther, Son, and Ho -- ly Spi -- rit, the Tri -- ni -- ty, one in es -- sence and in -- se -- p'ra -- ble.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/FSHS-Gregish.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create FSHS-Gregish
 \layout {
   indent = #0
   line-width = #120
@@ -669,16 +638,15 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   c4( b) c( d) | e2. e4 | f8( e d4) e4( f) | g2 g4 r8 g8 | c4 a g( f) | g4( f) e( f) |
   \time 2/4 g4( f) |
   \time 4/4 e2 c4 d | e2 d | c1
 }\addlyrics{Fa -- ther, Son, and Ho -- ly Spi -- rit, the Tri -- ni -- ty, one in es -- sence and in -- se -- p'ra -- ble.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/AMOP.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create AMOP
 \layout {
   indent = #0
   line-width = #120
@@ -686,16 +654,15 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 1/4
   c4
   \time 4/4
   c4( b) c d | e4(f e4.) e8 | f4 d e f | g2( f e1)
 }\addlyrics{A mer -- cy of peace, a sa --cri -- fice of praise.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/AWYS-Anafora.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create AWYS-Anafora
 \layout {
   indent = #0
   line-width = #120
@@ -703,14 +670,13 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   e4.( g8) f8( e) d4 | e4( f g a) g1
 }\addlyrics{And with your spi -- rit.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Lift-to-the-Lord.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Lift-to-the-Lord
 \layout {
   indent = #0
   line-width = #120
@@ -718,16 +684,15 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   c2 g4 g |
   \time 3/4
   g2 a4 | a4( g) f | e2.
 }\addlyrics{We lift them up un -- to the Lord.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Proper-and-right-orig.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Proper-and-right-orig
 \layout {
   indent = #0
   line-width = #120
@@ -735,14 +700,13 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   f2 e4 | d4 e f | e2.( d c)
 }\addlyrics{It is pro -- per and right.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Proper-and-right.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Proper-and-right
 \layout {
   indent = #0
   line-width = #120
@@ -750,15 +714,14 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   f2 e4 | d4 e f |
   \time 4/4 e2( d2 | \time 3/4 c2.)
 }\addlyrics{It is pro -- per and right.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Holy-Holy-Holy.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Holy-Holy-Holy
 \layout {
   indent = #0
   line-width = #120
@@ -766,7 +729,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   c2 c4 | d2 d4 | e2 e4 | f4 e d | e f g\fermata |
   \time 4/4
@@ -775,10 +738,9 @@ scoreTitleMarkup=##f
   f4 e8 f g4( f) | e2 e4. g8 | f8( e d4) e f | g4( a g4.\fermata) g8 |
   a2( b) | c1 | c4( b) c( d) | c2( b) | c1 
 }\addlyrics{Ho -- ly, ho -- ly, ho -- ly, Lord of an -- ge -- lic hosts, hea -- ven, heav'n and earth are filled with Your glo -- ry. Ho -- san -- na in the high -- est. O Bles -- sed is He who comes in the Lord’s name. In the name of the Lord. Ho -- san -- na in the high -- est.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Se-imnoumen.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Se-imnoumen
 \layout {
   indent = #0
   line-width = #120
@@ -786,7 +748,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \key d \minor
   \time 4/4
   a2 g4( bes) | a4( g f e) | d1 |
@@ -805,10 +767,9 @@ scoreTitleMarkup=##f
  ke δe -- o -- me -- θa su,
  o Θe -- os i -- mon.
 }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/We-Praise-You.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create We-Praise-You
 \layout {
   indent = #0
   line-width = #120
@@ -832,10 +793,9 @@ scoreTitleMarkup=##f
    Un -- to You O Lord we give our thanks,
    with our fer -- vent pra -- yer to You
    to You, our God.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Hymn-Theotokos.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Hymn-Theotokos
 \layout {
   indent = #0
   line-width = #120
@@ -843,7 +803,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   e4 e e e | e4 f e( d) | c2 d8( e d4) | e2
   e4 f | g4( a g f) | e4. r8 e8( f g a) | g2 e8( f16 g f8 e d4 e f g) | f4( e2) r4 |
@@ -862,10 +822,9 @@ scoreTitleMarkup=##f
   you who in -- cor -- rup -- ti -- bly gave birth to God, God the Word.
   Ve -- ri -- ly O The -- o -- to -- kos we mag -- ni -- fy you, mag -- ni -- fy you.
 }
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/AAYP.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create AAYP
 \layout {
   indent = #0
   line-width = #120
@@ -873,16 +832,15 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 1/4
   g4
   \time 4/4
   g4 g a2 | g1
 }\addlyrics{And all Your peo -- ple.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/One-Is-Holy.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create One-Is-Holy
 \layout {
   indent = #0
   line-width = #120
@@ -890,16 +848,15 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   e2 e4 | e2 c4 | f2 f4 | f2. | d2.( e2) f4 | g2. |
   r4 g g | c2. | b2 a4 | g4( a) f | g2. | f2 f4 | e2. |
 }\addlyrics{One is Ho -- ly, one is Lord, Je -- sus Christ,
             for the glo -- ry of God the Fa -- ther. A -- men.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Eis-Ayios.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Eis-Ayios
 \layout {
   indent = #0
   line-width = #120
@@ -907,17 +864,16 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 1/4
   c4
   \time 3/4
   e2 e4 | e2 c4 | f2 f4 | f2. | d2 d4 | e2 f4 | g2.( g4)
   r4 g | c2. | b2 a4 | g4( a) f | g2. | f2. | e2. |
 }\addlyrics{Εἷς Ἅ -- γι -- ος, εἷς Κύ -- ρι -- ος, Ἰ -- η -- σοῦς Χρι -- στός, εἰς δό -- ξαν Θε -- οῦ Πα -- τρός. Ἀ -- μήν.}\addlyrics{Is A -- ghi -- os, is Ki -- ri -- os, I -- i -- sus Hri -- stos, is δo -- ksan Θe -- u Pa -- tros. A -- min.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Communion-Hymn-en.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Communion-Hymn-en
 \layout {
   indent = #0
   line-width = #120
@@ -925,7 +881,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   e4( d) c4( b8 d) | c4 r e f | g4( a f g) |
   \time 2/4
@@ -933,11 +889,10 @@ scoreTitleMarkup=##f
   \time 4/4
   a4( g f e) | d4 r e f | e4.( d8 c d c4) | c4 r c c | d4( e f8 g f e) | e4.( d8 c d c4) | c2. r4 |
 }\addlyrics{Praise the Lord from the heav -- ens, praise Him in the high -- est.  Al -- le -- lu -- i -- a.}
-#+end_src
+EOF
 
 # Music from the old Green Book. [It's terrible, but they want it. :( ]
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Communion-Hymn-en-OGB.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Communion-Hymn-en-OGB
 \layout {
   indent = #0
   line-width = #120
@@ -945,17 +900,16 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   c4( d | \time 4/4 e4 d c b | c2) e4( f | g4 a f) g | g2 g4 g |
-  a2( b) | c2\fermata g4( a | b4 c b a) | g2 f4( e) | d2gy e4 f | g2 e4 f | e2( d) | c1 |
+  a2( b) | c2\fermata g4( a | b4 c b a) | g2 f4( e) | d2 e4 f | g2 e4 f | e2( d) | c1 |
   \time 2/4 c4 c | \time 4/4 d4( e f8 g f e) | e4.( d8 c d c4) | c1 |
 }\addlyrics{Praise Praise the Lord, from the heav -- ens, praise Him, praise Him, in the high -- est the high -- est.  Al -- le -- lu -- i -- a.}
-#+end_src
+EOF
 
 # Music from DCS.
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Communion-Hymn-gr.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Communion-Hymn-gr
 \layout {
   indent = #0
   line-width = #120
@@ -963,7 +917,7 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   c4( d)
   \time 4/4
@@ -981,11 +935,10 @@ scoreTitleMarkup=##f
   \time 4/4
   g2 e4( f) | e4.( d8 c d c4) | c4 r c c | d4( e f8 g f e) | e4.( d8 c d c4) | c2. r4 |
 }\addlyrics{Αἰ -- νεῖ -- τε τὸν Κύ -- ρι -- ον ἐκ τῶν οὐ -- ρα -- νῶν. Αἰ -- νεῖ -- τε αὐ -- τὸν ἐν τοῖς ὑ -- ψί -- στοις. Ἀλ -- λη -- λού -- ϊ -- α.}
-#+end_src
+EOF
 
 # Music from the old Green Book.
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Communion-Hymn-gr-OGB.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Communion-Hymn-gr-OGB
 \layout {
   indent = #0
   line-width = #120
@@ -993,16 +946,15 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 2/4
   c4( d) | \time 4/4 e4( d c b) | c2 e4( f) | g4( a) f( g) | g2 g4 g |
   a2 b | c2\fermata g4( a) | b4( c b a) | g2 f4( e) | d2 e4( f) | g2 e4( f) | e2( d) | c1 |
   \time 2/4 c4 c | \time 4/4 d4( e f8 g f e) | e4.( d8 c d c4) | c1 |
 }\addlyrics{Αἰ -- νεῖ -- τε τὸν Κύ -- ρι -- ον ἐκ τῶν οὐ -- ρα -- νῶν. Αἰ -- νεῖ -- τε αὐ -- τὸν ἐν τοῖς ὑ -- ψί -- στοις. Ἀλ -- λη -- λού -- ϊ -- α.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/We-have-seen.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create We-have-seen
 \layout {
   indent = #0
   line-width = #120
@@ -1010,7 +962,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g g g | a2 g4( f) | e4( f) g4. g8 | a4 g g2 | b4( a) g f | f2 e2 |
   g2 g4 g | a4 f e( f) | g2 g4 g | a4 g g g | a4 g g g | g4( f8 e f4) g | f2( e ) |
@@ -1018,10 +970,9 @@ scoreTitleMarkup=##f
 }\addlyrics{We have seen the light, the true light and have re -- ceived the heav'n -- ly Spi -- rit;
  we now have found the true faith, by our wor -- ship -- ping the un -- di -- vid -- ed Tri -- ni -- ty,
  Who has saved us.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Eidomen-to-fws-2.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Eidomen-to-fws-2
 \layout {
   indent = #0
   line-width = #120
@@ -1029,17 +980,16 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g g g | a2 g4 f | e4 f g4. g8 | a4 g g2 | b4 a g f | f e e2 |
   g2 g4 g | a4 f e f | g2 g4 g | a4 g g g | a4 g g g | g4( f8 e f4 g) | f2( e ) |
   \time 3/4
   b'2 b4 | b2 g4 | a2. | g8( a g4) f4 | e2.
 }\addlyrics{Εἴ -- δο -- μεν τὸ φῶς τὸ ἀ -- λη -- θι -- νόν, ἐ -- λά -- βο -- μεν Πνεῦ -- μα ἐ -- που -- ρά -- νι -- ον, εὕ -- ρο -- μεν πί -- στιν ἀ -- λη -- θῆ, ἀ -- δι -- αί -- ρε -- τον Τρι -- ά -- δα προ -- σκυ -- νοῦ -- ντες, αὕ -- τη γὰρ ἡ -- μᾶς ἔ -- σω -- σεν.}\addlyrics{I -- δo -- men to fos to a -- li -- θi -- non, e -- la -- vo -- men Pnev -- ma e -- pu -- ra -- ni -- on, ev -- ro -- men pi -- stin a -- li -- θi, a -- δi -- e -- re -- ton Tri -- a -- δa pro -- ski -- nu -- ndes, af -- ti ghar i -- mas e -- so -- sen.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/We-have-seen-FINAL.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create We-have-seen-FINAL
 \layout {
   indent = #0
   line-width = #120
@@ -1047,7 +997,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g g g | a2 g4( f) | e4( f) g4. g8 | a4 g g2 | b4( a) g f | f2 e2 |
   g2 g4 g | a4 f e( f) | g2 g4 g | a4 g g g | a4 g g g | g4( f8 e f4) g | f2( e ) |
@@ -1056,10 +1006,9 @@ scoreTitleMarkup=##f
 }\addlyrics{We have seen the light, the true light and have re -- ceived the heav'n -- ly Spi -- rit;
  we now have found the true faith, by our wor -- ship -- ping the un -- di -- vid -- ed Tri -- ni -- ty,
  Who has saved, __ saved __ us.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Let-Our-Mouths.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Let-Our-Mouths
 \layout {
   indent = #0
   line-width = #120
@@ -1067,7 +1016,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \partial 2 g2 | \time 4/4 g1 |
   \time 4/4
   g4 g g g | a2 g4 f | g4( f) e( f) |g4 r 8 g g4 g | b4( a) g f | f2 e4 r |
@@ -1079,10 +1028,9 @@ scoreTitleMarkup=##f
   \time 4/4
   g4( f) e( g) | \slurDown f2( r4 g | aes2 g2) |
 }\addlyrics{A -- men. Let our mouths be filled with Your praise, O Lord, that we may sing of Your glo -- ry. You have made us wor -- thy to par -- take of Your ho -- ly mys -- ter -- ies. Keep us in Your ho -- li -- ness, that all the day long we may med -- i -- tate up -- on Your right -- eous -- ness. Al -- le -- lu -- i -- a. Al -- le -- lu -- i -- a. Al -- le -- lu -- i -- a.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Ein-To-Onoma-1.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Ein-To-Onoma-1
 \layout {
   indent = #0
   line-width = #120
@@ -1090,7 +1038,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \partial 2 g2 | \time 4/4 g1 |
   \time 4/4
   g2 g4 g | a4 g g g |
@@ -1101,10 +1049,9 @@ scoreTitleMarkup=##f
   \time 6/4
   f2 e1 \bar "|"
 }\addlyrics{Ἀ -- μήν. Εἴ -- η τὸ | ὄ -- νο -- μα Κυ -- | ρί -- ου εὐ -- λο -- γη -- | μέ -- νον ἀ -- πὸ τοῦ | νῦν καὶ | ἕ -- ως τοῦ αἰ -- | ῶ -- νος.}\addlyrics{A -- min. I -- i to | o -- no -- ma Ki -- | ri -- u ev -- lo -- ghi -- | me -- non a -- po tu | nin ke | e -- os tu e -- | o -- nos.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Blessed-Be-The-Name-2.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Blessed-Be-The-Name-2
 \layout {
   indent = #0
   line-width = #120
@@ -1112,13 +1059,12 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 6/4 g2. g4 g g | \time 4/4 g4( a) g f | \time 6/4 g2. e4 f g | \time 4/4 a4 g g g | \time 6/4 f2 e1 \bar "|"
 }\addlyrics{Bless -- ed be the | name of the | Lord, from this time | forth and to the | a -- ges.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Ein-To-Onoma-3.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Ein-To-Onoma-3
 \layout {
   indent = #0
   line-width = #120
@@ -1126,13 +1072,12 @@ scoreTitleMarkup=##f
 }
 \relative c' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \partial 4 c4 | \time 6/4 g'4 g g g a g | g( a) g f g a | a4( b) b2. g4 | g4 a b2. g4 | \time 4/4 a4 g g g | \time 2/4 \slurDown g8( f e4) | \time 4/4 \slurDown f2.( g4 | \time 6/4 a2 g1) \bar "|."
 }\addlyrics{Τὸ ὄ -- νο -- μα Κυ -- ρί -- ου εἴ -- η εὐ -- λο -- γη -- μέ -- νον ἀ -- πὸ τοῦ νῦν καὶ ἕ -- ως τοῦ αἰ -- ῶ -- νος. __}\addlyrics{To o -- no -- ma Ki -- ri -- u i -- i ev -- lo -- ghi -- me -- non a -- po tu nin ke e -- os tu e -- o -- nos. __}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/LHM3-Father-Bless.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create LHM3-Father-Bless
 \layout {
   indent = #0
   line-width = #120
@@ -1140,17 +1085,16 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 4/4
   g4 g g g | g4 g g g | g4 g g g\fermata |
   \time 4/4
   a4 g f e | g4 g2. |
 }\addlyrics{Lord, have mer -- cy. Lord, have mer -- cy. Lord, have mer -- cy. Fa -- ther give the bles -- sing.}
-#+end_src
+EOF
 
 # From the New Green Book
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Ton-Eulogounta.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Ton-Eulogounta
 \layout {
   indent = #0
   line-width = #120
@@ -1158,7 +1102,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   g4 g g
   \time 4/4
@@ -1168,10 +1112,9 @@ scoreTitleMarkup=##f
   b4( a) g8( f e4)
   f2.( g4 \time 6/4 a2 g1)
 }\addlyrics{Τὸν εὐ -- λο -- γοῦν -- τα καὶ ἁ -- γι -- ά -- ζον -- τα ἡ -- μᾶς, Κύ -- ρι -- ε, φύ -- λατ -- τε εἰς πολ -- λὰ ἔ -- τη.}
-#+end_src
+EOF
 
-#+begin_src lilypond :exports none :results none :cmdline "-dbackend=svg -duse-paper-size-for-page=#f -dno-point-and-click " :file images/Ton-Eulogounta-old-green-book.svg :noweb yes
-<<lpsnippet()>>
+cat <<EOF | create Ton-Eulogounta-old-green-book
 \layout {
   indent = #0
   line-width = #120
@@ -1179,7 +1122,7 @@ scoreTitleMarkup=##f
 }
 \relative c'' {
   \textLengthOn
-  \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.TimeSignature.stencil = ##f
   \time 3/4
   g4 g g
   \time 4/4
@@ -1192,4 +1135,6 @@ scoreTitleMarkup=##f
   g4( f8 e f4 g) |
   f2( e2)\fermata
 }\addlyrics{Τὸν εὐ -- λο -- γοῦν -- τα καὶ ἁ -- γι -- ά -- ζον -- τα ἡ -- μᾶς, Κύ -- ρι -- ε, φύ -- λατ -- τε εἰς πολ -- λὰ ἔ -- τη.}\addlyrics{Ton ev -- lo -- ghun -- da ke a -- ghi -- a -- zon -- da i -- mas, Ki -- ri -- e, fi -- lat -- te is pol -- la e -- ti.}
-#+end_src
+EOF
+
+echo "Done." >&2
