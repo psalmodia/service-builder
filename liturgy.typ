@@ -975,3 +975,233 @@ PEOPLE
 #music("./images/Big-Amen.svg")
 
 
+= HOLY COMMUNION
+
+// PRIEST (read)
+
+// Lord Jesus Christ, our God, hear us from Your holy dwelling place and from the glorious throne of Your kingdom. You are enthroned on high with the Father and are also invisibly present among us. Come and sanctify us, and let Your pure Body and precious Blood be given to us by Your mighty hand and through us to all Your people.
+
+PRIEST
+
+Let us be attentive.
+
+The holy Gifts for the holy people of God.
+
+PEOPLE
+
+// One is Holy, one is Lord, Jesus Christ, for the glory of God the Father. Amen.
+
+#music("./images/One-Is-Holy.svg")
+
+// Εἷς Ἅγιος, εἷς Κύριος, Ἰησοῦς Χριστός, εἰς δόξαν Θεοῦ Πατρός. Ἀμήν.
+#music("./images/Eis-Ayios.svg")
+
+PEOPLE
+
+#rubric[The *Communion Prayers* are recited by all those prepared to receive the Body and the Blood of the Lord.]
+
+#text(1.2em)[
+I believe and confess, Lord, that You are truly the Christ, the Son of the living God, who came into the world to save sinners, of whom I am the first. I also believe that this is truly Your pure Body and that this is truly Your precious Blood. Therefore, I pray to You, have mercy upon me, and forgive my transgressions, voluntary and involuntary, in word and deed, known and unknown. And make me worthy without condemnation to partake of Your pure Mysteries for the forgiveness of sins and for life eternal. Amen.
+
+How shall I, who am unworthy, enter into the splendor of Your saints? If I dare to enter into the bridal chamber, my clothing will accuse me, since it is not a wedding garment; and being bound up, I shall be cast out by the angels. In Your love, Lord, cleanse my soul and save me.
+
+Loving Master, Lord Jesus Christ, my God, let not these holy Gifts be to my condemnation because of my unworthiness, but for the cleansing and sanctification of soul and body and the pledge of the future life and kingdom. It is good for me to cling to God and to place in Him the hope of my salvation.
+
+Receive me today, Son of God, as a partaker of Your mystical Supper. I will not reveal Your mystery to Your adversaries, nor will I give You a kiss as did Judas. But as the thief, I confess to You: Lord, remember me in Your kingdom.
+]
+
+== COMMUNION HYMN
+
+#rubric[The Communion Hymn may change according to the Feast Day.]
+
+PEOPLE
+
+// Praise, praise the Lord from the heavens; praise Him; praise Him in the highest, the highest.
+
+// Music from DCS.
+//#music("./images/Communion-Hymn-en.svg")
+
+// Music from the old Green Book. [It's terrible, but they want it. :( ]
+#music("./images/Communion-Hymn-en-OGB.svg")
+
+// Αἰνεῖτε τὸν Κύριον ἐκ τῶν οὐρανῶν. Αἰνεῖτε αὐτὸν ἐν τοῖς ὑψίστοις. Ἀλληλούϊα. Ἀλληλούϊα. Ἀλληλούϊα \\
+
+// Music from DCS. (It's better than the Green Book but they don't like it; so we remove it.)
+//#music("./images/Communion-Hymn-gr.svg")
+
+// Music from the old Green Book.
+#music("./images/Communion-Hymn-gr-OGB.svg")
+
+#rubric[The Priest partakes of the body and the blood of the Lord and he prepares the Holy Communion for the people.
+
+He takes the holy Cup, comes to the Royal Doors, raises it and says:]
+  
+PRIEST
+
+Μετὰ φόβου Θεοῦ, πίστεως καὶ ἀγάπης προσέλθετε.
+Approach with fear of God, with faith and with love.
+
+#rubric[
+Those prepared come forth with reverence to receive Holy Communion, singing the communion hymn.
+
+When Communion has been given to all, the priest blesses the people with the chalice, saying:
+]
+
+PRIEST
+
+O God, save Your people and bless Your inheritance.
+
+#keep-together[
+PEOPLE
+
+// We have seen the light, the true light and have received the heavenly Spirit; we now have found the true faith, by our worshiping the undivided Trinity, Who has saved, saved us.
+
+#music("./images/We-have-seen.svg")
+]
+
+// Εἴδομεν τὸ φῶς τὸ ἀληθινόν, ἐλάβομεν Πνεῦμα ἐπουράνιον, εὕρομεν πίστιν ἀληθῆ, ἀδιαίρετον Τριάδα προσκυνοῦντες, αὕτη γὰρ ἡμᾶς ἔσωσεν.
+
+#music("./images/Eidomen-to-fws-2.svg")
+
+#music("./images/We-have-seen-FINAL.svg")
+
+PRIEST
+
+Always, now and forever and to the ages of ages.
+
+// PEOPLE
+
+// Amen.
+
+#keep-together[
+PEOPLE
+
+// Let our mouths be filled with Your praise, O Lord, that we may sing of Your glory. You have made us worthy to partake of Your holy mysteries. Keep us in Your holiness, that all the day long we may meditate upon Your righteousness. Alleluia. Alleluia. Alleluia.
+
+#music("./images/Let-Our-Mouths.svg")
+]
+
+PRIEST
+
+Let us be attentive. Having partaken of the divine, holy, pure, immortal, heavenly, life giving, and awesome Mysteries of Christ, let us worthily give thanks to the Lord.
+
+PEOPLE
+
+// Lord, have mercy.
+#music("./images/LHM01.svg")
+
+#keep-together[
+PRIEST
+
+Help us, save us, have mercy upon us, and protect us, O God, by Your grace.
+]
+
+PEOPLE
+
+// Lord, have mercy.
+#music("./images/LHM02.svg")
+
+PRIEST
+
+Having prayed for a perfect, holy, peaceful and sinless day, let us commit ourselves and one another and our whole life to Christ our God.
+
+PEOPLE
+
+// To You, O Lord.
+#music("./images/TYOL01.svg")
+
+PRIEST
+
+For You are our sanctification and to You we give glory, to the Father and the Son and the Holy Spirit, now and forever and to the ages of ages.
+
+PEOPLE
+
+// Amen.
+#music("./images/Amen.svg")
+
+
+= THE DISMISSAL
+
+PRIEST
+
+Let us go forth in peace. Let us pray to the Lord. 
+
+PEOPLE
+
+// Lord, have mercy.
+#music("./images/LHM01.svg")
+
+#keep-together[
+PRIEST
+
+Lord, bless those who praise You and sanctify those who trust in You. Save Your people and bless Your inheritance. Protect the whole body of Your Church. Sanctify those who love the beauty of Your house. Glorify them in return by Your divine power, and do not forsake us who hope in You. Grant peace to Your world, to Your churches, to the clergy, to those in public service, to the armed forces and to all Your people. For every good and perfect gift is from above, coming from You, the Father of lights. To You we give glory, thanksgiving and worship, to the Father and the Son and the Holy Spirit, now and forever and to the ages of ages.
+]
+
+PEOPLE
+
+// Amen.
+
+// Εἴη τὸ ὄνομα Κυρίου εὐλογημένον ἀπὸ τοῦ νῦν καὶ ἕως τοῦ αἰῶνος. \\
+
+#music("./images/Ein-To-Onoma-1.svg")
+
+// Blessed be the name of the Lord, from this time forth, forever and forever.
+
+#music("./images/Blessed-Be-The-Name-2.svg")
+
+// Τὸ ὄνομα Κυρίου εὐλογημένον ἀπὸ τοῦ νῦν καὶ ἕως τοῦ αἰῶνος. \\
+
+#music("./images/Ein-To-Onoma-3.svg")
+
+PRIEST
+
+Let us pray to the Lord.
+
+PEOPLE
+
+// Lord, have mercy. Lord, have mercy. Lord, have mercy. Father give the blessing.
+
+#music("./images/LHM3-Father-Bless.svg")
+
+PRIEST
+
+May the blessing of the Lord and His mercy come upon you through His divine grace and love always, now and forever and to the ages of ages.
+
+PEOPLE
+
+// Amen.
+#music("./images/Amen.svg")
+
+PRIEST
+
+Glory to You, O Christ, our hope, glory to you.
+
+May Christ our true God (who is risen from the dead), as a good, loving and merciful God, have mercy upon us and save us, through the intercessions of His most pure and holy Mother; the power of the precious and life giving Cross; the protection of the honorable, bodiless powers of heaven, the supplications of the honorable, glorious prophet and forerunner John the Baptist; the holy, glorious and praiseworthy apostles; the holy, glorious and triumphant martyrs; our holy and God-bearing Fathers; the holy and righteous ancestors Joachim and Anna; Saint (of the day) whose memory we commemorate today, and all the saints.
+
+PEOPLE
+
+#rubric[Chanted softly.]
+
+// Unto the one who blesses us and sanctifies us with God’s grace, Lord 	keep him in Your care, many years unto him.
+
+// From the New Green Book
+//#music("./images/Ton-Eulogounta.svg")
+
+// From the old Green Book
+#music("./images/Ton-Eulogounta-old-green-book.svg")
+
+PEOPLE
+
+// Amen.
+#music("./images/Amen.svg")
+
+PRIEST
+
+Through the prayers of our holy fathers, Lord Jesus Christ, our God, have mercy on us and save us. 
+
+#keep-together[
+PEOPLE
+
+// Amen.
+#music("./images/Big-Amen.svg")
+]
