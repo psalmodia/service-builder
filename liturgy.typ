@@ -258,10 +258,12 @@ PRIEST
 // (Κύριε, ἐλέησον.)
 #music("./images/KE01.svg")
 
+#keep-together[
  Ὅτι Ἅγιος εἶ ὁ Θεὸς ἡμῶν, καὶ σοὶ τὴν δόξαν ἀναπέμπομεν, τῷ Πατρὶ καὶ τῷ Υἱῷ καὶ τῷ Ἁγίῳ Πνεύματι, νῦν καὶ ἀεί καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.
 
 // (Ἀμήν.)
 #music("./images/Amin.svg")
+]
 
 PEOPLE
 
@@ -385,6 +387,7 @@ And grant that always guarded by Your power we may give glory to You, the Father
 
 PEOPLE
 
+#text(1.2em)[
 Οἱ τὰ Χερουβεὶμ μυστικῶς εἰκονίζοντες, καὶ τῇ ζωοποιῷ Τριάδι Τριάδι τὸν τρισάγιον ὕμνον προσᾴδοντες, πᾶσαν τὴν βιοτικὴν ἀποθώμεθα πᾶσαν μέριμναν, ὡς τὸν Βασιλέα τῶν ὅλων ὑποδεξόμενοι.
 
 
@@ -392,15 +395,16 @@ PEOPLE
 // We who mystically represent the Cherubim, represent the Cherubim and we sing, we sing unto the life giving Trinity, the Trinity, the Trinity, Trinity, the Trinity the thrice holy hymn, we sing the thrice holy hymn. Let us lay aside the cares, all the cares of this life, all the cares of this life that we may receive the King, receive the King of all.
 
 Let us who mystically represent the cherubim, and who sing the thrice holy hymn to the life creating trinity, now lay aside every worldly care, so that we may receive the King of All.
+]
 
 // DEACON
 PRIEST
 
 Πάντων ὑμῶν μνησθείη Κύριος ὁ Θεὸς ἐν τῇ βασιλείᾳ αὐτοῦ, πάντοτε, νῦν καὶ ἀεὶ καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων.
 
-PEOPLE
+PEOPLE //#text(0.8em)[_(Pitched with priest.)_]
 
-Ἀμήν. (A-min)  #text(0.8em)[_(Pitched with priest.)_]
+#text(1.2em)[Ἀμήν. (A-min)]
 
 PRIEST
 
@@ -408,9 +412,10 @@ May the Lord God remember all of you in His kingdom, now and forever and to the 
 
 #rubric[The priest enters the sanctuary, while the people sing the end of the Cherubic Hymn.]
 
-PEOPLE
+PEOPLE //#text(0.8em)[_(Re-pitched to Cherubic Hymn conclusion.)_]
 
-Amen.  #text(0.8em)[_(Re-pitched to Cherubic Hymn conclusion.)_]
+#text(1.2em)[
+Amen.
 
 // Old Green Book:
 //Invisibly escorted by angelic hosts, angelic hosts. Alleluia. Alleluia. Alleluia.
@@ -419,7 +424,7 @@ Invisibly escorted by angelic hosts, angelic hosts. Alleluia. Alleluia. Alleluia
 
 Ταῖς ἀγγελικαῖς ἀοράτως δορυφορούμενον τάξεσιν. Ἀλληλούϊα. Ἀλληλούϊα. Ἀλληλούϊα.
 //(Tes angelikes aoratos thoriforumenon taxesin. Alliluia. Alliluia. Alliluia.)
-
+]
 
 #section[THE LITANY OF COMPLETION]
 
@@ -453,10 +458,12 @@ Help us, save us, have mercy on us, and protect us, O God, by Your grace.
 // (Lord, have mercy.)
 #music("./images/LHM02.svg")
 
+#keep-together[
 That the whole day may be perfect, holy, peaceful, and sinless, let us ask the Lord.
 
 // (Grant this, O Lord.)
 #music("./images/GTOL01.svg")
+]
 
 For an angel of peace, a faithful guide, a guardian of our souls and bodies, let us ask the Lord.
 
@@ -831,8 +838,10 @@ And make us worthy, Master, with confidence and without fear of condemnation, to
 
 PEOPLE
 
+#keep-together[
 === Greek
 
+#text(1.2em)[
 Πάτερ ἡμῶν, ὁ ἐν τοῖς οὐρανοῖς· \
 ἁγιασθήτω τὸ ὄνομά σου, \
 ἐλθέτω ἡ βασιλεία σου, \
@@ -843,9 +852,13 @@ PEOPLE
 ὡς καὶ ἡμεῖς ἀφίεμεν τοῖς ὀφειλέταις ἡμῶν. \
 Καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, \
 ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ.
+]
+]
 
+#keep-together[
 === Romanian
 
+#text(1.2em)[
 Tatal nostru Care esti in ceruri, \
 Sfinteasca-se numele Tau, \
 Vie imparatia Ta, Faca-se voia Ta, \
@@ -856,9 +869,13 @@ Si ne iarta noua greselile noastre \
 Precum si noi iertam gresitilor nostri. \
 Si nu ne duce pe noi in ispita, \
 Ci ne izbaveste de cel rau.
+]
+]
 
+#keep-together[
 === French
 
+#text(1.2em)[
 Notre Père, qui es aux cieux, \
 que ton nom soit sanctifié, \
 que ton règne vienne, \
@@ -869,9 +886,13 @@ remets-nous nos dettes, \
 comme nous aussi les remettons à nos débiteurs; \
 et ne nous laisse pas entrer dans l'épreuve, \
 mais délivre-nous du Malin.
+]
+]
 
+#keep-together[
 === Spanish
 
+#text(1.2em)[
 Padre Nuestro, que estás en los cielos, \
 Santificado sea Tu Nombre, \
 Venga a nos Tu reino, \
@@ -879,19 +900,26 @@ Hágase Tu voluntad así en la tierra como en el cielo. \
 El pan nuestro de cada día, dánoslo hoy \
 Y perdónanos nuestras deudas así como nosotros perdonamos a nuestros deudores. \
 Y no nos dejes caer en la tentación, más líbranos del mal.
+]
+]
 
+#keep-together[
 === Albanian
 
+#text(1.2em)[
 Ati yne qe je ne qiell u shenjterofte emri yt .Ardhte mbreteria jote.U befte deshira jote
 si ne qiell ashtu edhe mbi dhe .Buken tone te perditshme jepna neve sot .Dhe falna
 fajet tona sikurse edhe ne ua falim fajtoreve tane. Dhe mos na shtjer ne ngasje po
 shpetona nga i ligu . Amin.
+]
+]
 
+#keep-together[
 === Arabic
 
 //#music("./images/arabic-our-father.png")
 
-#text(1.2em, font: "Noto Sans Arabic", lang: "ar", dir: rtl)[
+#text(1.4em, font: "Noto Sans Arabic", lang: "ar", dir: rtl)[
  أَبَانَا الذِي فِي السَّمَاوَاتِ، \
  لِيَتَقَدَّسَ اسْمُكَ \
  لِيَأْتِ مَلَكُوتُكَ \
@@ -903,14 +931,18 @@ shpetona nga i ligu . Amin.
  لَكِنْ نَجِّنَا مِنَ الشِّرِّيرِ
  لأَنَّ لَكَ الْمُلْكَ وَالْقُوَّةَ وَالْمَجْدَ إِلَى الأَبَدِ\
   آمِين \
-]
+
 // Abana alathie fi asamawat, li yatakadas ismok, li ya’atie malakotok, litakon mashia
 // tok, kama fisama’ kathaleka ala al ard. A’atinia khubzana kafafa yawmina, wa igfer
 // lana khatayana, kama nahnu naghfer la man akhta’a elayna, wa la tudkhilna fit a
 // jareeb; laken najjina min ashireer.
+]
+]
 
+#keep-together[
 === Slavonic
 
+#text(1.2em)[
 Оче нашь ижє ѥси на нбсєхъ . да ститьсѧ имѧ \
 твоѥ да придєть црствиѥ твоѥ · да бѫдєть воля \
 твоя · яка на нбси и на земли хлѣбъ нашь насѫщьиыи · \
@@ -931,9 +963,13 @@ shpetona nga i ligu . Amin.
 // dazhd nam dnyes: ee o-sta-vee nam dol-gee \
 // na-shya, ya-ko-zhe ee mui o-sta-vlya-yem dol-zhnee-kom na-shuim: \
 // ee nye vvye-dee nas vo ees-koo-shye-ni-ye, no eez-ba-vee nas ot loo-ka-va-go.
+]
+]
 
+#keep-together[
 === English
 
+#text(1.2em)[
 Our Father, who art in heaven, hallowed be Thy name. \
 Thy kingdom come. Thy will be done, \
 on earth as it is in heaven. \
@@ -941,13 +977,17 @@ Give us this day our daily bread; \
 and forgive us our trespasses, \
 as we forgive those who trespass against us; \
 and lead us not into temptation, but deliver us from evil.
+]
+]
 
+#keep-together[
 PRIEST
 
 For Yours is the Kingdom and the power and the glory, of the Father and of the Son and of the Holy Spirit, now and forever and to the ages of ages.
 
 // (Amen.)
 #music("./images/Amen.svg")
+]
 
 Εἰρήνη πᾶσι.  Peace be with you all.
 
